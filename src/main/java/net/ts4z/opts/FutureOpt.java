@@ -41,10 +41,6 @@ public class FutureOpt<T> implements Opt<T> {
 
   @Override
   public T get() throws Exception {
-    try {
-      return _future.get();
-    } catch (InterruptedException | ExecutionException e) {
-      throw e;
-    }
+    return _future.get();
   }
 }
